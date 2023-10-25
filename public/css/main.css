@@ -1,0 +1,140 @@
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.taskField {
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.taskField .header {
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-left: 10px;
+    margin-bottom: 10px;
+}
+
+.taskField input {
+    border-radius: 5px;
+    border: 1px solid #262d3a;
+    background-color: #262d3a;
+    color: white;
+    width: 95%;
+    padding: 10px;
+    font-size: 16px;
+}
+.addButton {
+    margin-top: 10px;
+    width: 90%;
+    display: flex;
+    justify-content: center;
+}
+.addButton form {
+    width: 100%;
+}
+.addButton input {
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #2d1e5e;
+    padding-top: 12px;
+    padding-bottom: 12px;
+    width: 100%;
+    color: #805cf9;
+}
+.finishButtons {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: center;
+    width: 90%;
+}
+.finishButtons input {
+    transition-duration: 200ms;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: white;
+    border: 1px solid #2d1e5e;
+    color: #805cf9;
+    border-radius: 5px;
+    width: 250px;
+    margin: 19px;
+    padding: 10px;
+}
+.finishButtons input:hover {
+    transition-duration: 200ms;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #2d1e5e;
+    border: 1px solid white;
+    color: white;
+    border-radius: 5px;
+    width: 250px;
+    margin: 19px;
+    padding: 10px;
+}
+.container {
+    width: 600px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.errorBlock {
+    margin-top: 500px;
+    position: fixed;
+    color: white;
+    font-family: sans-serif;
+}
+.error {
+    background-color: red;
+    margin: 5px;
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+}
+.tasks {
+    display: flex;
+    flex-direction: column;
+}
+.task {
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border: 1px solid #2d1e5e;
+    padding: 20px;
+    margin: 20px;
+}
+.status {
+    width: 30px;
+    height: 30px;
+}
+.taskDescription {
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+}
+.taskText {
+    padding: 30px;
+}
+.taskControls {
+    display: flex;
+    justify-content: space-between;
+}
+.taskControls form input {
+    transition-duration: 200ms;
+    background-color: white;
+    border: 1px solid #2d1e5e;
+    border-radius: 3px;
+}
+.taskControls form input:hover {
+    transition-duration: 200ms;
+    background-color: #2d1e5e;
+    border: 1px solid white;
+    color: white;
+    border-radius: 3px;
+}

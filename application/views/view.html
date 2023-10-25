@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/regAuth.css">
+</head>
+<body>
+    {{errors}}
+    <div class = "container">
+        <h3>{{auth}}</h3>
+
+        <div class = 'taskField'>
+            <div class = 'header'>Описание задачи</div>
+            <form action = '/'' method = 'post' name = 'task' onchange=document.forms['task'].submit();>
+                <input type = 'text' name = 'task' value = '{{task}}'>
+            </form>
+            <br>
+        </div>
+
+        <div class = 'finishButtons'>
+            <form action = '/' method = 'post'>
+                <input type = 'submit' value = 'Сохранить' name = 'saveTask'>
+            </form>
+            <form action = '/'' method = 'post'>
+                <input type = 'submit' value = 'Новая задача' name = 'reset'>
+            </form>
+            <form action = '/' method = 'post'>
+                <input type = 'submit' value = 'Выйти' name = 'logout'>
+            </form>
+        </div>
+        <div class = 'tasks'>
+            {{tasklist}}
+        </div>
+
+    </div>
+</body>
+</html>
