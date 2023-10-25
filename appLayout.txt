@@ -19,3 +19,5 @@ function drawPage // Выводит всю страницу
 function drawLoginForm // Если сработала getLoginForm - true, выводит html для логина, вызывается в drawPage
 function drawProfile // Выводит на страницу имя пользователя и кнопку выхода, вызывается в drawPage
 function drawTasks // Выводит вёрстку задач, с возможностью удаления/смены статуса, вызывается в drawPage
+
+[DEPRECATED]
