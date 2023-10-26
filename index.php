@@ -1,12 +1,10 @@
 <?php
 
+
 require_once 'application/lib/dev.php';
-require_once 'application/core/Router.php';
+require_once 'application/core/controller.php';
 
-$router = new Router;
+$controller = new controller;
 
-$test = 123;
-
-debug($test);
-
+controller::auth();
 ?>
