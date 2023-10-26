@@ -1,20 +1,21 @@
 <?php
 
-require_once 'application/controllers/tasks.php';
-require_once 'application/controllers/user.php';
-require_once 'application/controllers/login.php';
+require_once 'application/controllers/TaskController.php';
+require_once 'application/controllers/UserController.php';
+require_once 'application/controllers/LoginController.php';
 
 require_once 'application/views/layouts/default.php';
 
-class controller {
+class Controller {
+    
     static function auth() {
 
         $view = new view(false);
 
-        if(loginController::authCheck() == true) {
+        if(LoginController::authCheck() == true) {
 
-            $user = new userController;
-            $tasks = new tasksController;
+            $user = new UserController;
+            $tasks = new TasksController;
 
             view::drawPage(true);
 

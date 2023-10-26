@@ -1,7 +1,7 @@
 <?php
 
 
-class loginController extends controller {
+class LoginController extends Controller {
 
     static function authCheck() {
         if (isset($_SESSION['user'])) {
