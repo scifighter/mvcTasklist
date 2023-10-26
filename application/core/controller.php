@@ -4,7 +4,7 @@ require_once 'application/controllers/TaskController.php';
 require_once 'application/controllers/UserController.php';
 require_once 'application/controllers/LoginController.php';
 
-require_once 'application/views/layouts/default.php';
+require_once 'application/core/View.php';
 
 class Controller {
     
