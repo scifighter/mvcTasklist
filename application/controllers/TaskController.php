@@ -1,5 +1,5 @@
 <?php
 
-class TasksController {
+class TasksController extends Controller {
     
 }

@@ -1,4 +1,4 @@
 <?php
 
-class UserController {
+class UserController extends Controller {
 }
