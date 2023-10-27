@@ -1,16 +1,10 @@
 <?php
 
-require_once 'application/controllers/TaskController.php';
-require_once 'application/controllers/UserController.php';
-require_once 'application/controllers/LoginController.php';
-
-require_once 'application/core/View.php';
-
 class Controller {
     
     static function auth() {
 
-        $view = new view(false);
+        $view = new View(false);
 
         if(LoginController::authCheck() == true) {
 
