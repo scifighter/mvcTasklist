@@ -8,6 +8,4 @@ Router::start();
 
 $controller = new Controller;
 
-controller::auth();
-
 ?>
