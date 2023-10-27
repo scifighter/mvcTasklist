@@ -6,14 +6,7 @@ class Autoloader {
     public static function register() {
 
         spl_autoload_register(function($class_name) {
-
-            $dirs = array(
-                'application/core/',
-                'application/controllers/',
-                'application/models/',
-                'application/views/',
-            );
-    
+            global $dirs;
             foreach( $dirs as $dir ) {
                 $filename = $dir.$class_name.'.php';
                 if (file_exists($filename)) {

@@ -14,7 +14,6 @@ class Controller {
             view::drawPage(true);
 
         } else {
-
             view::drawPage(false);
         }
 
