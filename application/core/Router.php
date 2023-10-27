@@ -35,7 +35,7 @@ class Router {
 			include "application/controllers/".$controller_file;
 		}
 		else {
-			//Router::ErrorPage404();
+			Router::ErrorPage404();
 		}
 		
 		$controller = new $controller_name;
@@ -45,9 +45,8 @@ class Router {
 			$controller->$action();
 		}
 		else {
-			//Router::ErrorPage404();
-            //debug($controller);
-            debug($action);
+			Router::ErrorPage404();
+
 		}
 	
 	}
