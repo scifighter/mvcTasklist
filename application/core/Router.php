@@ -3,7 +3,7 @@
 class Router {
 	static function start() {
 
-		$controller_name = 'Controller';
+		$controller_name = 'Main';
 		$action_name = 'index';
 		
 		$routes = explode('/', $_SERVER['REQUEST_URI']);
@@ -18,24 +18,24 @@ class Router {
 
 		$model_name = $controller_name.'Model';
 		$controller_name = $controller_name.'Controller';
-		$action_name = $action_name.'action';
+		$action_name = $action_name.'Action';
 
 
-		$model_file = strtolower($model_name).'.php';
+		$model_file = $model_name.'.php';
 		$model_path = "application/models/".$model_file;
 		
         if(file_exists($model_path)) {
 			include "application/models/".$model_file;
 		}
 
-		$controller_file = strtolower($controller_name).'.php';
+		$controller_file = $controller_name.'.php';
 		$controller_path = "application/controllers/".$controller_file;
 
 		if(file_exists($controller_path)) {
 			include "application/controllers/".$controller_file;
 		}
 		else {
-			Route::ErrorPage404();
+			//Router::ErrorPage404();
 		}
 		
 		$controller = new $controller_name;
@@ -45,12 +45,14 @@ class Router {
 			$controller->$action();
 		}
 		else {
-			Route::ErrorPage404();
+			//Router::ErrorPage404();
+            //debug($controller);
+            debug($action);
 		}
 	
 	}
 	
-	function ErrorPage404() {
+	static function ErrorPage404() {
         $host = 'http://'.$_SERVER['HTTP_HOST'].'/';
         header('HTTP/1.1 404 Not Found');
 		header("Status: 404 Not Found");
