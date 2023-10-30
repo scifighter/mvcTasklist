@@ -1,13 +1,12 @@
 <?php
 
-
 class LoginController extends Controller {
 
-    static function authCheck() {
+    function indexAction() {
         if (isset($_SESSION['user'])) {
-            return true;
+            header('Location:'.'User');
         } else {
-            return false;
+            $this->view->generate('MainView.php', 'TemplateView.php');
         }
     }
 }
