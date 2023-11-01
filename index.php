@@ -6,6 +6,8 @@ require_once 'application/lib/Autoloader.php';
 
 $_SESSION['user']['id'] = 0;
 $_SESSION['user']['name'] = 'admin';
-Router::start();
+
+$router = new Application\Core\Router();
+$router->start();
 
 ?>

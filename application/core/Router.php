@@ -1,5 +1,9 @@
 <?php
 
+namespace Application\Core;
+
+use Application\Controllers\UserController;
+
 class Router {
 	static function start() {
 
@@ -16,29 +20,12 @@ class Router {
 			$action_name = $routes[2];
 		}
 
+
 		$model_name = $controller_name.'Model';
 		$controller_name = $controller_name.'Controller';
 		$action_name = $action_name.'Action';
 
-
-		$model_file = $model_name.'.php';
-		$model_path = "application/models/".$model_file;
-		
-        if(file_exists($model_path)) {
-			include "application/models/".$model_file;
-		}
-
-		$controller_file = $controller_name.'.php';
-		$controller_path = "application/controllers/".$controller_file;
-
-		if(file_exists($controller_path)) {
-			include "application/controllers/".$controller_file;
-		}
-		else {
-			Router::ErrorPage404();
-		}
-		
-		$controller = new $controller_name;
+		$controller = new UserController();
 		$action = $action_name;
 		
 		if(method_exists($controller, $action)) {

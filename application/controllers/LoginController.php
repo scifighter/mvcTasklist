@@ -1,5 +1,5 @@
 <?php
-
+namespace Application\Controllers;
 class LoginController extends Controller {
 
     function indexAction() {

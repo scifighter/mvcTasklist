@@ -1,6 +1,10 @@
 <?php
 
-class UserController extends Controller {
+namespace Application\Controllers;
+
+use \Application\Core as Core;
+
+class UserController extends Core\Controller {
 
     function indexAction() {
         if (isset($_SESSION['user'])) {
