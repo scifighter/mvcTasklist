@@ -3,6 +3,8 @@
 namespace Application\Core;
 
 use Application\Controllers\UserController;
+use Application\Controllers\LoginController;
+use Application\Controllers\NfController;
 
 class Router {
 	static function start() {
@@ -19,13 +21,21 @@ class Router {
 		if ( !empty($routes[2]) ) {
 			$action_name = $routes[2];
 		}
-
+		
+		switch ($controller_name) {
+			case 'Login':
+				$controller = new LoginController();
+				break;
+			case 'User':
+				$controller = new UserController();
+				break;
+			default:
+				$controller = new NfController();
+		}
 
 		$model_name = $controller_name.'Model';
-		$controller_name = $controller_name.'Controller';
 		$action_name = $action_name.'Action';
 
-		$controller = new UserController();
 		$action = $action_name;
 		
 		if(method_exists($controller, $action)) {

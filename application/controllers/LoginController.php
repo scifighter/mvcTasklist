@@ -1,12 +1,16 @@
 <?php
+
 namespace Application\Controllers;
-class LoginController extends Controller {
+
+use \Application\Core as Core;
+
+class LoginController extends Core\Controller {
 
     function indexAction() {
-        if (isset($_SESSION['user'])) {
-            header('Location:'.'User');
+        if (!isset($_SESSION['user'])) {
+            $this->view->generate('LoginView.php', 'TemplateView.php');
         } else {
-            $this->view->generate('MainView.php', 'TemplateView.php');
+            header('Location:'.'User');
         }
     }
 }
